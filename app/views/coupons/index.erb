@@ -1,0 +1,7 @@
+<h1>Coupon Warehouse</h1>
+
+<h3>All Coupons:</h3>
+<% @coupons.each do |c| %>
+  <label for="store">Store: </label><%= c.store %><br>
+  <label for="code">Code: </label><%= link_to c.coupon_code, coupon_path(c)%><br><br>
+<% end %>
