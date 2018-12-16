@@ -7,14 +7,14 @@ describe 'Route to view' do
   end
 end
 
-describe 'Multiple coupons are shown' do
-  it 'on the index page' do
-    Coupon.create(coupon_code: "ASD123", store: "Chipotle")
-    Coupon.create(coupon_code: "XYZ098", store: "Jamba")
-    visit coupons_path
-    expect(page).to have_content(/Chipotle|Jamba/)
-  end
-end
+# describe 'Multiple coupons are shown' do
+#   it 'on the index page' do
+#     Coupon.create(coupon_code: "ASD123", store: "Chipotle")
+#     Coupon.create(coupon_code: "XYZ098", store: "Jamba")
+#     visit coupons_path
+#     expect(page).to have_content(/Chipotle|Jamba/)
+#   end
+# end
 
 describe 'form page' do
   it 'form renders with the new action' do
